@@ -167,7 +167,7 @@ export default function App() {
         <Layer className="calendar">Calendar with sponsors</Layer>
         <Layer
           className="rocky-shore"
-          style={{ transform: `translateY(${Math.pow(1 - shoreProgress, 2) * 600}px)` }}
+          style={{ transform: `translateY(${Math.pow(1 - shoreProgress, 2) * 400}px)` }}
         >
           Rocky shore (pebbles → solid color)
         </Layer>

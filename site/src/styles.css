@@ -135,8 +135,8 @@ body {
 .page-1 .misty-mountains {
   left: 0;
   right: 0;
-  top: 18%;
-  height: 42%;
+  top: 7%;
+  height: 49%;
   background: #8a9aa8;
   opacity: 0.85;
   z-index: 2;
@@ -149,37 +149,28 @@ body {
   background: #3f6b3a;
   z-index: 3;
 }
-.page-1 .jungle {
-  left: 0;
-  right: 0;
-  top: 55%;
-  height: 45%;
-  background: #2d5a2a;
-  z-index: 4;
-}
 .page-1 .temple {
-  left: 32%;
-  top: 30%;
-  width: 36%;
-  height: 45%;
+  width: 100%;
+  bottom: 0;
+  height: 65%;
   background: #9a8566;
-  z-index: 5;
+  z-index: 6;
 }
 .page-1 .deity {
-  left: 44%;
-  top: 38%;
-  width: 12%;
-  height: 28%;
+  bottom: 5%;
+  width: 100%;
+  height: 75%;
   background: #c9a24a;
-  z-index: 6;
+  opacity: 0.9;
+  z-index: 5;
 }
 .page-1 .trees-front {
   left: 0;
   right: 0;
-  top: 50%;
-  height: 50%;
+  top: 0;
+  height: 100%;
   background: #1f3f1c;
-  opacity: 0.55;
+  opacity: 0;
   z-index: 7;
 }
 .page-1 .palm-leafs {
@@ -195,16 +186,16 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  height: 29%;
+  height: 50%;
   background: #163d14;
-  opacity: 0.55;
+  opacity: 0.2;
   z-index: 9;
 }
 
 /* -------- Page 2: Catacombs -------- */
 .page-2 {
   background: #2a1f14;
-  height: 2489px;
+  height: 2289px;
 }
 .page-2 .cavern-wall {
   inset: 0;
@@ -310,7 +301,7 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  height: 25%;
+  height: 39%;
   background: repeating-radial-gradient(
     circle at 10% 50%,
     #6a5a4a 0 8px,
