@@ -74,14 +74,14 @@ export default function App() {
         // rise only when the bottom of page 3 is approaching the viewport bottom
         // so it feels like a rapid last-moment elevation.
         const distance = rect.bottom - vh; // px until page 3 bottom meets viewport bottom
-        const RANGE = vh * 0.7;             // how much scroll the rise consumes
+        const RANGE = vh * 0.7; // how much scroll the rise consumes
         const sp = 1 - Math.max(0, Math.min(1, distance / RANGE));
         setShoreProgress(sp);
 
         // Deity reveal: begins when the deity's position enters the viewport
         // bottom, completes as it reaches roughly the middle of the screen.
-        const DEITY_TOP = 553; // keep in sync with .page-3 .deity-cenote top
-        const DEITY_H = 316;
+        const DEITY_TOP = rect.height * 0.4019; // 40.19% of page-3
+        const DEITY_H = rect.height * 0.2297;   // 22.97% of page-3
         const waterLine = rect.top + DEITY_TOP + DEITY_H;
         const start = vh; // waterline at bottom of viewport → progress 0
         // Fully revealed exactly at Button 3's scroll target
@@ -103,10 +103,18 @@ export default function App() {
         <div className="header-content">
           <div className="logo">LOGO</div>
           <nav className="nav-buttons">
-            <button className="btn" onClick={goPage1Bottom}>Button 1</button>
-            <button className="btn" onClick={goPage2}>Button 2</button>
-            <button className="btn mirrored" onClick={goBeforeShore}>Button 3 (mirrored)</button>
-            <button className="btn mirrored" onClick={goPage4}>Button 4 (mirrored)</button>
+            <button className="btn" onClick={goPage1Bottom}>
+              Button 1
+            </button>
+            <button className="btn" onClick={goPage2}>
+              Button 2
+            </button>
+            <button className="btn mirrored" onClick={goBeforeShore}>
+              Button 3 (mirrored)
+            </button>
+            <button className="btn mirrored" onClick={goPage4}>
+              Button 4 (mirrored)
+            </button>
           </nav>
         </div>
       </header>
@@ -159,15 +167,16 @@ export default function App() {
         <div className="deity-reflection-clip">
           <div
             className="deity-reflection-inner"
-            style={{ transform: `translateY(${-(1 - deityProgress) * 100}%)` }}
+            style={{ transform: `translateY(${(1 - deityProgress) * 100}%)` }}
           >
             Deity reflection (low opacity)
           </div>
         </div>
-        <Layer className="calendar">Calendar with sponsors</Layer>
         <Layer
           className="rocky-shore"
-          style={{ transform: `translateY(${Math.pow(1 - shoreProgress, 2) * 400}px)` }}
+          style={{
+            transform: `translateY(${Math.pow(1 - shoreProgress, 2) * 400}px)`,
+          }}
         >
           Rocky shore (pebbles → solid color)
         </Layer>

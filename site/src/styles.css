@@ -219,9 +219,9 @@ body {
 }
 .page-2 .mural {
   left: 20%;
-  top: 625px;
+  top: 27.31%;
   width: 60%;
-  height: 1357px;
+  height: 59.28%;
   background: #8a6a3a;
   border: 8px double #c9a24a;
   z-index: 2;
@@ -245,9 +245,9 @@ body {
 .page-3 .deity-clip {
   position: absolute;
   left: 20%;
-  top: 553px;
+  top: 40.19%;
   width: 12%;
-  height: 316px;
+  height: 22.97%;
   overflow: hidden;
   z-index: 4;
 }
@@ -267,9 +267,9 @@ body {
 .page-3 .deity-reflection-clip {
   position: absolute;
   left: 20%;
-  top: 881px;
+  top: 64.03%;
   width: 12%;
-  height: 163px;
+  height: 11.85%;
   overflow: hidden;
   z-index: 3;
   transform: scaleY(-1);
@@ -290,9 +290,9 @@ body {
 }
 .page-3 .calendar {
   left: 10%;
-  top: 1000px;
+  top: 72.67%;
   width: 80%;
-  height: 300px;
+  height: 21.80%;
   background: #e8d9b8;
   color: #2a1f14;
   z-index: 5;
