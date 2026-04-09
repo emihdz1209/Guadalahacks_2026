@@ -1,0 +1,325 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: system-ui, sans-serif;
+  color: #fff;
+}
+
+.site {
+  width: 100%;
+}
+
+/* Sticky header */
+.sticky-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  height: 84.76px;
+  box-sizing: border-box;
+  background: #6b5a43;
+  border-bottom: 2px solid #2a1f14;
+  display: flex;
+  flex-direction: column;
+}
+
+.header-content {
+  flex: 1 1 auto;
+  min-height: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px 16px;
+}
+.logo {
+  width: 56px;
+  height: 56px;
+  background: #c9a24a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid #2a1f14;
+  border-radius: 50%;
+  color: #2a1f14;
+  font-weight: bold;
+}
+.nav-buttons {
+  display: flex;
+  gap: 12px;
+}
+.btn {
+  cursor: pointer;
+  font-family: inherit;
+  padding: 6px 14px;
+  font-size: 12px;
+  background: #c9a24a;
+  color: #2a1f14;
+  border: 2px solid #2a1f14;
+  font-weight: bold;
+}
+.btn.mirrored {
+  transform: scaleX(-1);
+}
+.btn.mirrored::before {
+  content: attr(data-label);
+  display: inline-block;
+  transform: scaleX(-1);
+}
+
+/* Generic page */
+.page {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  border-bottom: 2px solid #000;
+}
+.page.tall {
+  height: 200vh;
+}
+
+/* Parallax landing scene */
+.parallax-scene {
+  position: relative;
+  width: 100%;
+}
+.parallax-viewport {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  border-bottom: 2px solid #000;
+}
+.parallax-viewport .layer {
+  will-change: transform;
+}
+.page-label {
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+  z-index: 50;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 6px 12px;
+  font-size: 14px;
+}
+
+/* Layer base */
+.layer {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: bold;
+  text-align: center;
+  border: 1px dashed rgba(255, 255, 255, 0.5);
+}
+
+/* -------- Page 1: Jungle Temple -------- */
+.page-1 {
+  background: #7bb7d9;
+}
+/* Page 1 final (landed) layout — all within a single 100vh viewport.
+   Parallax translateY is applied via inline style in React. */
+.page-1 {
+  background: #7bb7d9;
+}
+.page-1 .sky {
+  inset: 0;
+  background: linear-gradient(#7bb7d9, #c9e3ef);
+  z-index: 1;
+}
+.page-1 .misty-mountains {
+  left: 0;
+  right: 0;
+  top: 18%;
+  height: 42%;
+  background: #8a9aa8;
+  opacity: 0.85;
+  z-index: 2;
+}
+.page-1 .tree-tops-back {
+  left: 0;
+  right: 0;
+  top: 42%;
+  height: 35%;
+  background: #3f6b3a;
+  z-index: 3;
+}
+.page-1 .jungle {
+  left: 0;
+  right: 0;
+  top: 55%;
+  height: 45%;
+  background: #2d5a2a;
+  z-index: 4;
+}
+.page-1 .temple {
+  left: 32%;
+  top: 30%;
+  width: 36%;
+  height: 45%;
+  background: #9a8566;
+  z-index: 5;
+}
+.page-1 .deity {
+  left: 44%;
+  top: 38%;
+  width: 12%;
+  height: 28%;
+  background: #c9a24a;
+  z-index: 6;
+}
+.page-1 .trees-front {
+  left: 0;
+  right: 0;
+  top: 50%;
+  height: 50%;
+  background: #1f3f1c;
+  opacity: 0.55;
+  z-index: 7;
+}
+.page-1 .palm-leafs {
+  left: 0;
+  top: 0;
+  width: 35%;
+  height: 55%;
+  background: #2a6b28;
+  border-radius: 0 0 60% 0;
+  z-index: 8;
+}
+.page-1 .bushes {
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 29%;
+  background: #163d14;
+  opacity: 0.55;
+  z-index: 9;
+}
+
+/* -------- Page 2: Catacombs -------- */
+.page-2 {
+  background: #2a1f14;
+  height: 2489px;
+}
+.page-2 .cavern-wall {
+  inset: 0;
+  z-index: 1;
+  background: radial-gradient(
+    ellipse at center,
+    #5a4430 0%,
+    #2a1f14 70%,
+    #1a120a 100%
+  );
+  flex-direction: column;
+  gap: 20px;
+}
+.page-2 .torch {
+  display: inline-block;
+  padding: 8px 14px;
+  background: #c44a1a;
+  color: #fff;
+  border: 2px solid #2a1f14;
+  margin: 4px;
+}
+.page-2 .mural {
+  left: 20%;
+  top: 625px;
+  width: 60%;
+  height: 1357px;
+  background: #8a6a3a;
+  border: 8px double #c9a24a;
+  z-index: 2;
+}
+
+/* -------- Page 3: Cenote -------- */
+.page-3 {
+  background: #0e4a5e;
+  height: 1376px;
+}
+.page-3 .cenote-bg {
+  inset: 0;
+  z-index: 1;
+  background: radial-gradient(
+    ellipse at center 30%,
+    #2a8aa8 0%,
+    #0e4a5e 60%,
+    #06222e 100%
+  );
+}
+.page-3 .deity-clip {
+  position: absolute;
+  left: 20%;
+  top: 553px;
+  width: 12%;
+  height: 316px;
+  overflow: hidden;
+  z-index: 4;
+}
+.page-3 .deity-inner {
+  position: absolute;
+  inset: 0;
+  background: #c9a24a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 13px;
+  text-align: center;
+  color: #fff;
+  will-change: transform;
+}
+.page-3 .deity-reflection-clip {
+  position: absolute;
+  left: 20%;
+  top: 881px;
+  width: 12%;
+  height: 163px;
+  overflow: hidden;
+  z-index: 3;
+  transform: scaleY(-1);
+  opacity: 0.25;
+}
+.page-3 .deity-reflection-inner {
+  position: absolute;
+  inset: 0;
+  background: #c9a24a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 13px;
+  text-align: center;
+  color: #fff;
+  will-change: transform;
+}
+.page-3 .calendar {
+  left: 10%;
+  top: 1000px;
+  width: 80%;
+  height: 300px;
+  background: #e8d9b8;
+  color: #2a1f14;
+  z-index: 5;
+}
+.page-3 .rocky-shore {
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 25%;
+  background: repeating-radial-gradient(
+    circle at 10% 50%,
+    #6a5a4a 0 8px,
+    #4a3d30 8px 16px
+  );
+  z-index: 6;
+}
+
+/* -------- Page 4 -------- */
+.page-4 {
+  background: #4a3d30;
+}
