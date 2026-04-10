@@ -15,7 +15,7 @@ const LAYERS = [
   { cls: "tree-tops-back", label: "Tree tops (Back)", travel: 220 },
   { cls: "temple", label: "Temple", travel: 460 },
   { cls: "deity", label: "Deity", travel: 500 },
-  { cls: "trees-front", label: "Trees (Front)", travel: 640 },
+  { cls: "trees-front", label: "Trees (Front)", travel: 550 },
   { cls: "palm-leafs", label: "Big Palm Leafs", travel: 820 },
   { cls: "bushes", label: "Bushes (Foreground)", travel: 1000 },
 ];
