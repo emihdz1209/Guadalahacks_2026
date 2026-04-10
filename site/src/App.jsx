@@ -10,10 +10,9 @@ function Layer({ className, style, children }) {
 
 // Per-layer parallax travel in px. Bigger = moves more = feels closer.
 const LAYERS = [
-  { cls: "sky", label: "Sky", travel: 40 },
+  { cls: "sky", label: "Sky", travel: 0 },
   { cls: "misty-mountains", label: "Misty Mountain range", travel: 120 },
   { cls: "tree-tops-back", label: "Tree tops (Back)", travel: 220 },
-  { cls: "jungle", label: "Jungle", travel: 380 },
   { cls: "temple", label: "Temple", travel: 460 },
   { cls: "deity", label: "Deity", travel: 500 },
   { cls: "trees-front", label: "Trees (Front)", travel: 640 },
@@ -159,7 +158,7 @@ export default function App() {
         <div className="deity-clip">
           <div
             className="deity-inner"
-            style={{ transform: `translateY(${(1 - deityProgress) * 100}%)` }}
+            style={{ transform: `translateY(${(1 - deityProgress) * 75}%)` }}
           >
             Deity
           </div>
@@ -167,7 +166,7 @@ export default function App() {
         <div className="deity-reflection-clip">
           <div
             className="deity-reflection-inner"
-            style={{ transform: `translateY(${(1 - deityProgress) * 100}%)` }}
+            style={{ transform: `translateY(${(1 - deityProgress) * 75}%)` }}
           >
             Deity reflection (low opacity)
           </div>
