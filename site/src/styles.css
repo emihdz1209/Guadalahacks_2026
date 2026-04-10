@@ -129,7 +129,7 @@ body {
 }
 .page-1 .sky {
   inset: 0;
-  background-image: url('../src/public/assets/Page1/SKY_FIX.png');
+  background-image: url('/Guadalahacks_2026/assets/Page1/SKY_FIX.png');
   background-size: auto 75%;
   background-repeat: no-repeat;
   flex-direction: column;
@@ -141,7 +141,7 @@ body {
   right: 0;
   top: 7%;
   height: 49%;
-  background-image: url('../src/public/assets/Page1/Ilustración115\ \(1\).png');
+  background-image: url('/Guadalahacks_2026/assets/Page1/Ilustración115\ \(1\).png');
   background-size: auto 100%;
   flex-direction: column;
   background-position:left;
@@ -206,7 +206,7 @@ body {
 .page-2 .cavern-wall {
   inset: 0;
   z-index: 1;
-  background-image: url('../src/public/assets/Page2/Catacombs_ 2.png');
+  background-image: url('/Guadalahacks_2026/assets/Page2/Catacombs_ 2.png');
   background-size: 100% auto;
   background-repeat: no-repeat;
   flex-direction: column;
@@ -239,7 +239,7 @@ body {
 .page-3 .cenote-bg {
   inset: 0;
   z-index: 1;
-  background-image: url('../src/public/assets/Page3/Cenote Fondo.PNG');
+  background-image: url('/Guadalahacks_2026/assets/Page3/Cenote Fondo.PNG');
   background-size: 100% auto;
   background-repeat: no-repeat;
   flex-direction: column;
