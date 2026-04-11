@@ -200,14 +200,15 @@ body {
 
 /* -------- Page 2: Catacombs -------- */
 .page-2 {
-  background: #200c0e;
+  background-image: url('/Guadalahacks_2026/assets/Page2/Cave backup.png');
   height: 2289px;
+  background-repeat: repeat;
 }
 .page-2 .cavern-wall {
   inset: 0;
   z-index: 1;
   background-image: url('/Guadalahacks_2026/assets/Page2/Catacombs_ 2.png');
-  background-size: 100% auto;
+  background-size: auto 100%;
   background-repeat: no-repeat;
   flex-direction: column;
   background-position: center top;
@@ -240,7 +241,7 @@ body {
   inset: 0;
   z-index: 1;
   background-image: url('/Guadalahacks_2026/assets/Page3/Cenote Fondo.PNG');
-  background-size: 100% auto;
+  background-size: 100% 100%;
   background-repeat: no-repeat;
   flex-direction: column;
   background-position: center top;
