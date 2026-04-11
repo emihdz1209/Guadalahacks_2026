@@ -129,7 +129,7 @@ body {
 }
 .page-1 .sky {
   inset: 0;
-  background-image: url('/Guadalahacks_2026/assets/Page1/SKY_FIX.png');
+  background-image: url("/Guadalahacks_2026/assets/Page1/SKY_FIX.png");
   background-size: auto 75%;
   background-repeat: no-repeat;
   flex-direction: column;
@@ -141,10 +141,10 @@ body {
   right: 0;
   top: 7%;
   height: 49%;
-  background-image: url('/Guadalahacks_2026/assets/Page1/Ilustración115\ \(1\).png');
+  background-image: url("/Guadalahacks_2026/assets/Page1/Ilustración115\ \(1\).png");
   background-size: auto 100%;
   flex-direction: column;
-  background-position:left;
+  background-position: left;
   z-index: 2;
 }
 .page-1 .tree-tops-back {
@@ -159,7 +159,11 @@ body {
   width: 100%;
   bottom: 0;
   height: 65%;
-  background: #9a8566;
+  background-image: url("/Guadalahacks_2026/assets/Page1/Temple Sketch.png");
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  flex-direction: column;
+  background-position: center;
   z-index: 6;
 }
 .page-1 .deity {
@@ -200,14 +204,14 @@ body {
 
 /* -------- Page 2: Catacombs -------- */
 .page-2 {
-  background-image: url('/Guadalahacks_2026/assets/Page2/Cave backup.png');
+  background-image: url("/Guadalahacks_2026/assets/Page2/Cave backup.png");
   height: 2289px;
   background-repeat: repeat;
 }
 .page-2 .cavern-wall {
   inset: 0;
   z-index: 1;
-  background-image: url('/Guadalahacks_2026/assets/Page2/Catacombs_ 2.png');
+  background-image: url("/Guadalahacks_2026/assets/Page2/Catacombs_ 2.png");
   background-size: auto 100%;
   background-repeat: no-repeat;
   flex-direction: column;
@@ -234,24 +238,25 @@ body {
 
 /* -------- Page 3: Cenote -------- */
 .page-3 {
-  background: #0e4a5e;
+  background-image: url("/Guadalahacks_2026/assets/MayanWall.png");
+  background-size: auto 10%;
+  background-repeat: repeat;
   height: 1376px;
 }
 .page-3 .cenote-bg {
   inset: 0;
   z-index: 1;
-  background-image: url('/Guadalahacks_2026/assets/Page3/Cenote Fondo.PNG');
-  background-size: 100% 100%;
+  background-image: url("/Guadalahacks_2026/assets/Page3/Cenote Fondo.png");
+  background-size: auto 100%;
   background-repeat: no-repeat;
   flex-direction: column;
   background-position: center top;
-    /*radial-gradient(
+  /*radial-gradient(
     ellipse at center 30%,
     #2a8aa8 0%,
     #0e4a5e 60%,
     #06222e 100%
   );*/
-  
 }
 .page-3 .deity-clip {
   position: absolute;
@@ -303,7 +308,7 @@ body {
   left: 10%;
   top: 72.67%;
   width: 80%;
-  height: 21.80%;
+  height: 21.8%;
   background: #e8d9b8;
   color: #2a1f14;
   z-index: 5;
