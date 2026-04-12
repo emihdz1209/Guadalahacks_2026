@@ -115,7 +115,6 @@ body {
   font-size: 13px;
   font-weight: bold;
   text-align: center;
-  border: 1px dashed rgba(255, 255, 255, 0.5);
 }
 
 /* -------- Page 1: Jungle Temple -------- */
@@ -141,18 +140,22 @@ body {
   right: 0;
   top: 7%;
   height: 49%;
-  background-image: url("/Guadalahacks_2026/assets/Page1/Ilustración115\ \(1\).png");
-  background-size: auto 100%;
+  background-image: url("/Guadalahacks_2026/assets/Page1/TwinPeaks.png");
+  background-size: 100% auto;
   flex-direction: column;
-  background-position: left;
+  background-position: center top;
   z-index: 2;
 }
 .page-1 .tree-tops-back {
   left: 0;
   right: 0;
   top: 39%;
-  height: 20%;
-  background: #3f6b3a;
+  height: 40%;
+  background-image: url("/Guadalahacks_2026/assets/Page1/TreeTopsCrop.png");
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  flex-direction: column;
+  background-position: top center;
   z-index: 3;
 }
 .page-1 .temple {
@@ -160,10 +163,10 @@ body {
   bottom: 0;
   height: 65%;
   background-image: url("/Guadalahacks_2026/assets/Page1/Temple Sketch.png");
-  background-size: 100% auto;
+  background-size: auto 100%;
   background-repeat: no-repeat;
   flex-direction: column;
-  background-position: center;
+  background-position: center bottom;
   z-index: 6;
 }
 .page-1 .deity {
@@ -171,7 +174,7 @@ body {
   width: 100%;
   height: 75%;
   background: #c9a24a;
-  opacity: 0.9;
+  opacity: 0.2;
   z-index: 5;
 }
 .page-1 .trees-front {
@@ -179,8 +182,10 @@ body {
   right: 0;
   top: 15%;
   height: 78%;
-  background: #1f3f1c;
-  opacity: 0.8;
+  background-image: url("/Guadalahacks_2026/assets/Page1/TreeTops.png");
+  background-size: 110% auto;
+  flex-direction: column;
+  background-position: center bottom;
   z-index: 4;
 }
 .page-1 .palm-leafs {
