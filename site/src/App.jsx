@@ -1,9 +1,8 @@
 import React, { useEffect, useRef, useState } from "react";
 
-function Layer({ className, style, children }) {
+function Layer({ className, style }) {
   return (
     <div className={`layer ${className}`} style={style}>
-      {children ?? className}
     </div>
   );
 }
@@ -13,11 +12,12 @@ const LAYERS = [
   { cls: "sky", label: "Sky", travel: 0 },
   { cls: "misty-mountains", label: "Misty Mountain range", travel: 120 },
   { cls: "tree-tops-back", label: "Tree tops (Back)", travel: 220 },
-  { cls: "temple", label: "Temple", travel: 460 },
-  { cls: "deity", label: "Deity", travel: 500 },
+  { cls: "temple", label: "Temple", travel: 660 },
+  { cls: "deity", label: "Deity", travel: 900 },
   { cls: "trees-front", label: "Trees (Front)", travel: 550 },
-  { cls: "palm-leafs", label: "Big Palm Leafs", travel: 820 },
-  { cls: "bushes", label: "Bushes (Foreground)", travel: 1000 },
+  { cls: "palm-leafsL", label: "Big Palm Leafs L", travel: 920 },
+  { cls: "palm-leafsR", label: "Big Palm Leafs R", travel: 920 },
+  { cls: "bushes", label: "Bushes (Foreground)", travel: 1020 },
 ];
 
 const PARALLAX_RANGE = 1000; // px of scroll consumed by the landing animation
@@ -100,7 +100,10 @@ export default function App() {
       {/* Sticky header */}
       <header className="sticky-header">
         <div className="header-content">
-          <div className="logo">LOGO</div>
+          <div className="header-left">
+            <div className="logo"></div>
+            <div className="title"></div>
+          </div>
           <nav className="nav-buttons">
             <button className="btn" onClick={goPage1Bottom}>
               Button 1
@@ -134,33 +137,25 @@ export default function App() {
               {label}
             </Layer>
           ))}
-          <div className="page-label">Page 1 — Jungle Temple</div>
         </div>
       </div>
 
       {/* Page 2 - Catacombs */}
       <section className="page page-2" ref={page2Ref}>
         <Layer className="cavern-wall">
-          Cavern wall (background, shaded, trails into solid color)
-          <div className="torch">Torch</div>
-          <div className="torch">Torch</div>
-          <div className="torch">Torch</div>
         </Layer>
         <Layer className="mural">Mural (gilded edge)</Layer>
-        <div className="page-label">Page 2 — Catacombs</div>
       </section>
 
       {/* Page 3 - Cenote */}
       <section className="page page-3" ref={page3Ref}>
         <Layer className="cenote-bg">
-          Cenote (massive background, fades in)
         </Layer>
         <div className="deity-clip">
           <div
             className="deity-inner"
             style={{ transform: `translateY(${(1 - deityProgress) * 75}%)` }}
           >
-            Deity
           </div>
         </div>
         <div className="deity-reflection-clip">
@@ -168,7 +163,6 @@ export default function App() {
             className="deity-reflection-inner"
             style={{ transform: `translateY(${(1 - deityProgress) * 75}%)` }}
           >
-            Deity reflection (low opacity)
           </div>
         </div>
         <Layer
@@ -177,14 +171,11 @@ export default function App() {
             transform: `translateY(${Math.pow(1 - shoreProgress, 2) * 400}px)`,
           }}
         >
-          Rocky shore (pebbles → solid color)
         </Layer>
-        <div className="page-label">Page 3 — Cenote</div>
       </section>
 
       {/* Page 4 - solid color landing after rocky shore transition */}
       <section className="page page-4" ref={page4Ref}>
-        <div className="page-label">Page 4</div>
       </section>
     </div>
   );
