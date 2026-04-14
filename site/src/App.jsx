@@ -1,10 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 
 function Layer({ className, style }) {
-  return (
-    <div className={`layer ${className}`} style={style}>
-    </div>
-  );
+  return <div className={`layer ${className}`} style={style}></div>;
 }
 
 // Per-layer parallax travel in px. Bigger = moves more = feels closer.
@@ -80,7 +77,7 @@ export default function App() {
         // Deity reveal: begins when the deity's position enters the viewport
         // bottom, completes as it reaches roughly the middle of the screen.
         const DEITY_TOP = rect.height * 0.4019; // 40.19% of page-3
-        const DEITY_H = rect.height * 0.2297;   // 22.97% of page-3
+        const DEITY_H = rect.height * 0.2297; // 22.97% of page-3
         const waterLine = rect.top + DEITY_TOP + DEITY_H;
         const start = vh; // waterline at bottom of viewport → progress 0
         // Fully revealed exactly at Button 3's scroll target
@@ -106,16 +103,16 @@ export default function App() {
           </div>
           <nav className="nav-buttons">
             <button className="btn" onClick={goPage1Bottom}>
-              Button 1
+              Home
             </button>
             <button className="btn" onClick={goPage2}>
-              Button 2
+              About Us
             </button>
-            <button className="btn mirrored" onClick={goBeforeShore}>
-              Button 3 (mirrored)
-            </button>
-            <button className="btn mirrored" onClick={goPage4}>
-              Button 4 (mirrored)
+            <button className="btn" onClick={goBeforeShore}>
+              Sponsors
+            </button>  
+            <button className="btn" onClick={goPage4}>
+              FAQ
             </button>
           </nav>
         </div>
@@ -142,41 +139,35 @@ export default function App() {
 
       {/* Page 2 - Catacombs */}
       <section className="page page-2" ref={page2Ref}>
-        <Layer className="cavern-wall">
-        </Layer>
+        <Layer className="cavern-wall"></Layer>
         <Layer className="mural">Mural (gilded edge)</Layer>
       </section>
 
       {/* Page 3 - Cenote */}
       <section className="page page-3" ref={page3Ref}>
-        <Layer className="cenote-bg">
-        </Layer>
+        <Layer className="cenote-bg"></Layer>
         <div className="deity-clip">
           <div
             className="deity-inner"
             style={{ transform: `translateY(${(1 - deityProgress) * 75}%)` }}
-          >
-          </div>
+          ></div>
         </div>
         <div className="deity-reflection-clip">
           <div
             className="deity-reflection-inner"
             style={{ transform: `translateY(${(1 - deityProgress) * 75}%)` }}
-          >
-          </div>
+          ></div>
         </div>
         <Layer
           className="rocky-shore"
           style={{
             transform: `translateY(${Math.pow(1 - shoreProgress, 2) * 400}px)`,
           }}
-        >
-        </Layer>
+        ></Layer>
       </section>
 
       {/* Page 4 - solid color landing after rocky shore transition */}
-      <section className="page page-4" ref={page4Ref}>
-      </section>
+      <section className="page page-4" ref={page4Ref}></section>
     </div>
   );
 }

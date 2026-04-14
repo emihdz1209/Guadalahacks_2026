@@ -147,7 +147,7 @@ body {
 .page-1 .sky {
   inset: 0;
   background-image: url("/Guadalahacks_2026/assets/Page1/SKY_FIX.png");
-  background-size: auto 75%;
+  background-size: 100% auto;
   background-repeat: no-repeat;
   flex-direction: column;
   background-position: center top;
@@ -375,8 +375,9 @@ body {
   bottom: 0;
   height: 39%;
   background-image: url("/Guadalahacks_2026/assets/Page3/Rocky_shore.png");
-  background-size: auto 100%;
-  background-repeat: repeat-x;
+  background-size: 100% auto;
+  background-position: center bottom;
+  background-repeat: no-repeat;
   z-index: 6;
 }
 
