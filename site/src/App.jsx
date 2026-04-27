@@ -552,6 +552,10 @@ export default function App() {
             </Layer>
           ))}
         </div>
+        {/* Countdown + register CTA at the top of Home (scrolls away, not sticky) */}
+        <div className="home-cta">
+          <Countdown />
+        </div>
       </div>
 
       {/* Page 2 - Catacombs (visual) */}
@@ -570,11 +574,6 @@ export default function App() {
       {/* Page 3 - Cenote */}
       <section className="page page-3" ref={page3Ref}>
         <Layer className="cenote-bg"></Layer>
-
-          {/* Floating countdown / register card */}
-          <div className="page-3-content">
-            <Countdown />
-          </div>
 
         <div className="deity-clip">
           <div
