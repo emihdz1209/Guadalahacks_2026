@@ -307,12 +307,6 @@ function PartnersSection() {
             alt="Tecnológico de Monterrey - EIC"
           />
         </div>
-        <div className="logo-card">
-          <img
-            src="/Guadalahacks_2026/images/page 4/Partners/emprendimiento_tec.webp"
-            alt="Emprendimiento Tec"
-          />
-        </div>
       </div>
     </div>
   );
