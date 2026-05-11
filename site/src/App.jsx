@@ -521,7 +521,7 @@ export default function App() {
               About Us
             </button>
             <button className="btn" onClick={goRockyShoreStart}>
-              Regístrate
+              Sponsors
             </button>
             <button className="btn" onClick={goPage4}>
               FAQ
