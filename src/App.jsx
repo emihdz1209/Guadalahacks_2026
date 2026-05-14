@@ -39,8 +39,8 @@ const STALL = 100; // px of scroll where everything is pinned
 // ----- Photo collage data (Page 2). Generic naming pattern; hover image
 // is the same name suffixed with "-hover".
 const COLLAGE_PHOTOS = Array.from({ length: 6 }, (_, i) => ({
-  base: `/Guadalahacks_2026/images/page 2/guadalahacks-pics/foto-${i + 1}.png`,
-  hover: `/Guadalahacks_2026/images/page 2/guadalahacks-pics/foto-${i + 1}-hover.jpg`,
+  base: `/images/page 2/guadalahacks-pics/foto-${i + 1}.png`,
+  hover: `/images/page 2/guadalahacks-pics/foto-${i + 1}-hover.jpg`,
   alt: `Foto evento ${i + 1}`,
 }));
 
@@ -268,7 +268,7 @@ function SponsorsSection() {
           rel="noreferrer"
         >
           <img
-            src="/Guadalahacks_2026/images/page 4/Sponsors/GitHubLogo.svg"
+            src="/images/page 4/Sponsors/GitHubLogo.svg"
             alt="GitHub"
           />
           <span className="logo-name">GitHub</span>
@@ -280,7 +280,7 @@ function SponsorsSection() {
           rel="noreferrer"
         >
           <img
-            src="/Guadalahacks_2026/images/page 4/Sponsors/CursorLogo.svg"
+            src="/images/page 4/Sponsors/CursorLogo.svg"
             alt="Cursor"
           />
           <span className="logo-name">Cursor</span>
@@ -297,13 +297,13 @@ function PartnersSection() {
       <div className="logo-grid">
         <div className="logo-card">
           <img
-            src="/Guadalahacks_2026/images/page 4/Partners/life.webp"
+            src="/images/page 4/Partners/life.webp"
             alt="LiFE"
           />
         </div>
         <div className="logo-card">
           <img
-            src="/Guadalahacks_2026/images/page 4/Partners/eic.webp"
+            src="/images/page 4/Partners/eic.webp"
             alt="Tecnológico de Monterrey - EIC"
           />
         </div>
