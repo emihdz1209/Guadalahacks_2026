@@ -596,7 +596,16 @@ export default function App() {
         <FAQSection />
         <ConnectSection />
         <footer className="site-footer">
-          © {new Date().getFullYear()} Guadalahacks
+          <p>Hecho con ❤️ por el equipo de Guadalahacks</p>
+          <p>© {new Date().getFullYear()} Guadalahacks</p>
+          <a
+            className="footer-cdc-link"
+            href="https://static.mlh.io/docs/mlh-code-of-conduct.pdf"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Código de Conducta
+          </a>
         </footer>
       </section>
     </div>
