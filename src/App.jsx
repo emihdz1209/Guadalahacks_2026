@@ -206,7 +206,7 @@ function Countdown() {
       </div>
       <a
         className="register-btn"
-        href="https://registro.tecoding.com"
+        href="https://registro.guadalahacks.com/"
         target="_blank"
         rel="noreferrer"
       >
