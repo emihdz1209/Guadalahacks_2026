@@ -51,8 +51,8 @@ const GMAPS_URL =
 const APPLE_MAPS_URL =
   "https://maps.apple.com/?daddr=Tecnol%C3%B3gico+de+Monterrey+Campus+Guadalajara";
 
-// ----- Countdown target: May 16, 2026 9:00 AM (UTC-6, GDL local time) -----
-const EVENT_TARGET = new Date("2026-05-16T09:00:00-06:00").getTime();
+// ----- Countdown target: May 17, 2026 10:31 AM (UTC-6, GDL local time) -----
+const EVENT_TARGET = new Date("2026-05-17T10:31:00-06:00").getTime();
 
 // ----- FAQ data -----
 const FAQS = [
@@ -193,7 +193,8 @@ function Countdown() {
   return (
     <div className="countdown-wrap">
       <p className="countdown-eyebrow">Guadalahacks 2026</p>
-      <h2 className="countdown-title">16 &amp; 17 de mayo · 9:00 AM</h2>
+      <h2 className="countdown-title">16 &amp; 17 de mayo</h2>
+      <p className="countdown-subtitle">Las entregas cierran en:</p>
       <div className="countdown-grid">
         {cells.map((c) => (
           <div className="countdown-cell" key={c.label}>
@@ -206,11 +207,11 @@ function Countdown() {
       </div>
       <a
         className="register-btn"
-        href="https://registro.guadalahacks.com/"
+        href="https://guadalahacks2026.devpost.com/"
         target="_blank"
         rel="noreferrer"
       >
-        Regístrate
+        DevPost
       </a>
     </div>
   );
