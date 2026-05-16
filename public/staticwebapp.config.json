@@ -1,0 +1,9 @@
+{
+  "routes": [
+    {
+      "route": "/cdc",
+      "redirect": "https://github.com/MLH/mlh-policies/blob/main/code-of-conduct.md",
+      "statusCode": 301
+    }
+  ]
+}
